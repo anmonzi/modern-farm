@@ -1,3 +1,4 @@
+// function that takes the harvestedFoodArray as an argument, iterates through the array and in doing so prints the name of the food in html section
 export const Catalog = (harvestedFoodArray) => {
     // declaring empty string
     let htmlString = ``;
