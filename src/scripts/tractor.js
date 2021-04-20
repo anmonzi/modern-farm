@@ -15,18 +15,28 @@ import { addPlant, usePlants } from "./field.js"
 export const plantSeeds = (yearlyPlantingPlan) => {
     for (const plan of yearlyPlantingPlan) {
         for (let j = 0; j < plan.length; j++) {
-            if (plan[j] === "Asparagus") {
-                addPlant(createAsparagus());
-            } else if (plan[j] === "Corn") {
-                addPlant(createCorn());
-            } else if (plan[j] === "Potato") {
-                addPlant(createPotato());
-            } else if (plan[j] === "Soybean") {
-                addPlant(createSoybean());
-            } else if (plan[j] === "Sunflower") {
-                addPlant(createSunflower());
-            } else if (plan[j] === "Wheat") {
-                addPlant(createWheat());
+            //Switch statement in place of If..Else if
+            switch (plan[j]) {
+                case "Asparagus":
+                    addPlant(createAsparagus())
+                break;
+                case "Corn":
+                    addPlant(createCorn())
+                break;
+                case "Potato":
+                    addPlant(createPotato())
+                break;
+                case "Soybean":
+                    addPlant(createSoybean())
+                break;
+                case "Sunflower":
+                    addPlant(createSunflower())
+                break;
+                case "Wheat":
+                    addPlant(createWheat())
+                break;
+                default:
+                    console.log("Error")
             }
         }
     }
