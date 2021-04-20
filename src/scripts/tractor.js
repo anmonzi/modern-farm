@@ -13,9 +13,11 @@ import { addPlant, usePlants } from "./field.js"
 
 // Function that accepts the year's planting plan array as a parameter
 export const plantSeeds = (yearlyPlantingPlan) => {
+    //Need to iterate through top level of array
     for (const plan of yearlyPlantingPlan) {
+        //Need to iterate through children arrays
         for (let j = 0; j < plan.length; j++) {
-            //Switch statement in place of If..Else if
+            //Switch statement in place of If..Else if --- if plan = seed name then add the creation of plant to array
             switch (plan[j]) {
                 case "Asparagus":
                     addPlant(createAsparagus())
